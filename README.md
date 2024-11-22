@@ -1,50 +1,68 @@
-# React + TypeScript + Vite
+# Ignite Reactjs - Timer: Task Timer App for Focused Work Sessions
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is a project from [Rocketseat](https://app.rocketseat.com.br/) lessons . The coding school that brings together the largest community of devs in Latin America and offers a complete platform for continuous learning in programming with diverse training for professionals of all levels and career stages. 
 
-Currently, two official plugins are available:
+## Table of contents
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Overview](#overview)
+  - [The application](#the-challenge)
+  - [Screenshot](#screenshot)
+- [My process](#my-process)
+  - [Built with](#built-with)
+  - [What I learned](#what-i-learned)
+  - [Useful resources](#useful-resources)
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Overview
 
-- Configure the top-level `parserOptions` property like this:
+### The application
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+Task timer app. This tool allows the user to focus on the task for the timed period. Completed, interrupted and ongoing tasks can be reviewed in the history.
+A task timer app helps users stay focused by breaking tasks into timed intervals, commonly known as the Pomodoro technique. It allows users to track their ongoing, completed, and interrupted tasks in a history section.
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### Screenshot
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+![](./src/assets/home.png)
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+## My process
+
+### My process
+
+I used **React** to build the interactive components, **Styled-components** for the UI design, and **Formik** & **Zod** to manage forms and validation. To persist data (like tasks and their statuses), I leveraged **Immer** to keep the state immutable while simplifying updates.
+
+The project was built using **Vite** for a fast development environment, and **TypeScript** was used to enhance code quality with type safety.
+
+### Built with
+
+**UI/Design**:
+- [Styled-components](https://styled-components.com/)
+- [Phosphor icons](https://phosphoricons.com/)
+
+**State Management**:
+- Immer
+
+**Form Handling**:
+- [Formik](https://formik.org/)
+- [Zod](https://zod.dev/)
+
+**Date Handling**:
+- [Date-fns](https://date-fns.org/)
+
+**Routing**:
+- React Router DOM
+
+**Core Technologies**:
+- [React](https://reactjs.org/)
+- [Vite](https://vitejs.dev/)
+- [Typescript](https://www.typescriptlang.org/)
+
+### What I learned
+
+- To use inner to allow to work with immutable state
+- Help manage complex state logic: to create, interrupt and mark task as fineshed
+- Style components using styled-components: theme, global styles, passing props
+
+### Useful resources
+
+- [Rocketseat - Ignite Course](https://app.rocketseat.com.br/) - The course that helped me get started with this project.
+- [React Documentation](https://reactjs.org/docs/getting-started.html) - Official documentation for understanding React better.
